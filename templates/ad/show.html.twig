@@ -1,0 +1,62 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+    {{ ad.title }}
+{% endblock %}
+
+{% block body %}
+    <div style="background-image: url({{ ad.coverImage }})" >
+        <div class="container  ">
+            <h1>{{ ad.title }}</h1>
+            <p> {{ ad.introduction }}</p>
+        </div>
+    </div>
+    <div class="container my-4">
+        <div class="row">
+            <div class="col-8 my-4">
+                {{ ad.content|raw }}
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        {% for image in ad.images %}
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="{{ image.url }}" alt="First slide">
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col my-4">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="http://placehold.it/64x/64x" alt="Avatar">
+                    </div>
+                    <div class="col">
+                        <h3>COCO LOCO</h3>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ex id ipsam, obcaecati quas
+                    reprehenderit sint? Atque et quidem similique.</p>
+                <p>Aliquid dignissimos distinctio dolor eos error fuga hic itaque maiores modi molestiae molestias,
+                    nobis nulla officiis optio, provident quod quos.</p>
+                <p>Aut culpa excepturi hic nihil, perspiciatis quos. Consequuntur, delectus eius est, et eveniet
+                    laudantium nihil odio officiis quia sed, ullam.</p>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+

@@ -1,0 +1,37 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 2019
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "plugins": [],
+  "extends": "eslint:recommended",
+  "rules": {
+    "camelcase": "error",
+    "complexity": ["error", 5],
+    "eol-last": ["error", "always"],
+    "global-require": "error",
+    "indent": ["error", "tab"],
+    "linebreak-style": ["error", "unix"],
+    "line-comment-position": ["error", { "position": "above" }],
+    "max-depth": ["error", 5],
+    "max-len": ["error", 120],
+    "max-lines": ["error", 500],
+    "max-lines-per-function": ["error", 100],
+    "max-statements-per-line": ["error", {"max":  1}],
+    "no-continue": "error",
+    "no-nested-ternary": "error",
+    "no-trailing-spaces": "error",
+    "no-var": "error",
+    "prefer-template": "error",
+    "semi": ["error", "always"],
+    "semi-style": ["error", "last"],
+    "sort-imports": "error",
+    "sort-keys": "error",
+    "sort-vars": "error",
+    "strict": "error"
+  }
+}

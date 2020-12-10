@@ -20,7 +20,7 @@ class Image
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $limage;
+    private $url;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -28,24 +28,24 @@ class Image
     private $caption;
 
     /**
-     * @ORM\ManyToOne(targetEntity=add::class, inversedBy="images")
+     * @ORM\ManyToOne(targetEntity=Ad::class, inversedBy="images")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $add;
+    private $ad;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getLimage(): ?string
+    public function getUrl(): ?string
     {
-        return $this->limage;
+        return $this->url;
     }
 
-    public function setLimage(string $limage): self
+    public function setUrl(string $url): self
     {
-        $this->limage = $limage;
+        $this->url = $url;
 
         return $this;
     }
@@ -62,14 +62,14 @@ class Image
         return $this;
     }
 
-    public function getAdd(): ?add
+    public function getAd(): ?ad
     {
-        return $this->add;
+        return $this->ad;
     }
 
-    public function setAdd(?add $add): self
+    public function setAd(?ad $ad): self
     {
-        $this->add = $add;
+        $this->ad = $ad;
 
         return $this;
     }
