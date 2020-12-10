@@ -62,7 +62,7 @@ class Ad
     private $fotos;
 
     /**
-     * @ORM\OneToMany(targetEntity=Images::class, mappedBy="ad", orphanRemoval=true)
+     * @ORM\OneToMany(targetEntity=Image::class, mappedBy="ad", orphanRemoval=true)
      *@var Image
      */
     private $image;
@@ -207,26 +207,26 @@ class Ad
         return $this;
     }
     /**
-     * @return Collection|images[]
+     * @return Collection|image[]
      */
     public function getImages(): Collection
     {
-        return $this->images;
+        return $this->image;
     }
 
-    public function addImage(Images $image): self
+    public function addImage(image $image): self
     {
-        if (!$this->images->contains($image)) {
-            $this->images[] = $image;
+        if (!$this->image->contains($image)) {
+            $this->image[] = $image;
             $image->setAd($this);
         }
 
         return $this;
     }
 
-    public function removeImage(Images $image): self
+    public function removeImage(image $image): self
     {
-        if ($this->images->removeElement($image)) {
+        if ($this->image->removeElement($image)) {
             // set the owning side to null (unless already changed)
             if ($image->getAd() === $this) {
                 $image->setAd(null);

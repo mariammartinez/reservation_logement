@@ -25,7 +25,6 @@ class Image
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $caption;
 
     /**
      * @ORM\ManyToOne(targetEntity=Ad::class, inversedBy="images")
@@ -50,17 +49,7 @@ class Image
         return $this;
     }
 
-    public function getCaption(): ?string
-    {
-        return $this->caption;
-    }
 
-    public function setCaption(string $caption): self
-    {
-        $this->caption = $caption;
-
-        return $this;
-    }
 
     public function getAd(): ?ad
     {

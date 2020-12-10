@@ -60,7 +60,8 @@ class AdType extends AbstractType
             ->add(
                 'price',
                 MoneyType::class,
-                $this->getConfiguration("Le prix", "Ici le prix"))
+                $this->getConfiguration("Le prix", "Ici le prix")
+            )
             ->add(
                 'rooms',
                 IntegerType::class,
