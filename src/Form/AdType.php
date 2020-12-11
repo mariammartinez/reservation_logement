@@ -13,6 +13,7 @@ use Symfony\Component\Form\Extension\Core\Type\UrlType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
+
 class AdType extends AbstractType
 {
     /**
@@ -76,7 +77,8 @@ class AdType extends AbstractType
                 'images',
                 CollectionType::class, [
                     'entry_type'=> ImageType::class,
-                    'allow_add' => true
+                    'allow_add' => true,
+                    'allow_delete' => true
                 ]
             )
         ;

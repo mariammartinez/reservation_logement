@@ -6,4 +6,4 @@ window.$ = require('jquery');
 
 require('bootstrap');
 
-
+require('ad');
