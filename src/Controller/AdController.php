@@ -1,9 +1,8 @@
 <?php
 
 namespace App\Controller;
-
-
 use App\Entity\Ad;
+use App\Entity\Image;
 use App\Form\AdType;
 use App\Repository\AdRepository;
 use Doctrine\Persistence\ManagerRegistry;
@@ -45,13 +44,19 @@ class AdController extends AbstractController
 
             $ad = new Ad();
 
+
+
             $form = $this->createForm(Adtype::class, $ad);
 
             $form->handleRequest($request);
 
-
-
             if($form->isSubmitted() && $form->isValid()){
+                $manager = $managerRegistry->getManager();
+                foreach ($ad->getImages() as $image) {
+                    $image->setAd($ad);
+                    $manager->persist($image);
+                }
+
                 $manager = $managerRegistry->getManager();
                 $manager->persist($ad);
                 $manager->flush();

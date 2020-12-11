@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Ad;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\MoneyType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
@@ -19,14 +20,16 @@ class AdType extends AbstractType
      *
      * @param $label
      * @param $placeholder
+     * @param array $options
      * @return array
      */
 
-    private function getConfiguration($label, $placeholder){
-        return [
-            'label' => $label,
-            'attr' => [ 'placeholder'=> $placeholder]
-        ];
+    private function getConfiguration($label, $placeholder, $options = []){
+        return array_merge([
+                'label' => $label,
+                'attr' => [ 'placeholder'=> $placeholder
+                ]
+            ], $options);
     }
 
     public function buildForm(FormBuilderInterface $builder, array $options)
@@ -40,7 +43,9 @@ class AdType extends AbstractType
             ->add(
                 'slug',
                 TextType::class,
-                $this->getConfiguration("web", "automatique")
+                $this->getConfiguration("web", "automatique", [
+                    'required'=> false
+                ])
             )
             ->add(
                 'introduction',
@@ -66,6 +71,13 @@ class AdType extends AbstractType
                 'rooms',
                 IntegerType::class,
                 $this->getConfiguration("Nombre de chambres", "les chambres")
+            )
+            ->add(
+                'images',
+                CollectionType::class, [
+                    'entry_type'=> ImageType::class,
+                    'allow_add' => true
+                ]
             )
         ;
     }
