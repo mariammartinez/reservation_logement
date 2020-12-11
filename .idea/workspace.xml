@@ -5,15 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2929bd26-bff2-449d-bc42-f2560ab84bea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/js/ad.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ad/_collection.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ad/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20201211121431.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20201211122156.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/AccountController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/login.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ad.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/show/ad.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/build/private.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/build/private.bundle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/AdController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Ad.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Ad.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Image.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Image.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/AdType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AdType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ad/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ad/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ad/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ad/new.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,6 +168,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\maria\Desktop\symfony 10000000\nuevo_proyecto\assets\js\show" />
       <recent name="C:\Users\maria\Desktop\symfony 10000000\nuevo_proyecto\public\js" />
     </key>
   </component>
@@ -174,7 +182,7 @@
       <updated>1607411675845</updated>
       <workItem from="1607411677442" duration="22899000" />
       <workItem from="1607442253901" duration="13620000" />
-      <workItem from="1607506676329" duration="55146000" />
+      <workItem from="1607506676329" duration="68873000" />
     </task>
     <servers />
   </component>
