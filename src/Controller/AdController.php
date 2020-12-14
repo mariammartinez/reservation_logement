@@ -15,11 +15,11 @@ class AdController extends AbstractController
 {
     /**
      * @Route("/ads", name="ads_index")
+     *
      * @param AdRepository $repo
+     *
      * @return Response
      */
-
-
     public function index(AdRepository $repo): Response
     {
 
@@ -28,7 +28,7 @@ class AdController extends AbstractController
         $ads = $repo->findAll();
 
 
-        return $this->render('ad/login.html.twig', [
+        return $this->render('ad/show.html.twig', [
             'ads'=> $ads
         ]);
     }
@@ -54,6 +54,8 @@ class AdController extends AbstractController
                     $image->setAd($ad);
                     $manager->persist($image);
                 }
+
+                $ad->setAuthor($this->getUser());
 
                 $manager = $managerRegistry->getManager();
                 $manager->persist($ad);

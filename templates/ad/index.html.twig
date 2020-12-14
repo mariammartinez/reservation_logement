@@ -7,22 +7,7 @@
         <h1 class="my-4"> Voici la liste</h1>
         <div class="row m-5">
             {% for ad in ads %}
-                {% set url = path('ads_show', {'slug':ad.slug}) %}
-            <div class="col-md-4">
-                <div class="card text-white bg-warning mb-3 "  style="max-width: 20rem;">
-                    <div class="card-header">{{ ad.title }}</div>
-                    <div class="card-body">
-                        <a href="{{ url }}">
-                            <h4 class="card-title">{{ ad.price }} euros</h4>
-                        </a>
-                        <a href="{{ url }}">
-                            <p class="card-text"> {{ ad.rooms }} chambres</p>
-                        </a>
-                        <a href="{{ url }}">
-                        <img src="{{ ad.coverImage }}" alt="une image" style="height: 200px; width: 100%; display: block"></a>
-                    </div>
-                </div>
-            </div>
+                {% include '_ad.html.twig' %}
             {% endfor %}
         </div>
     </div>
