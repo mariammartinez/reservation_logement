@@ -14,7 +14,7 @@
     </div>
     <div class="container my-4">
         <div class="row">
-            <div class="col-8 my-4">
+            <div class="col-md-8 my-4">
                 {{ ad.content|raw }}
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
@@ -42,12 +42,12 @@
             <div class="col my-4">
                 {%  set a = ad.author %}
                 <div class="row">
-                    <div class="col-2 ">
+                    <div class="col-md-2 ">
                         <a href="{{ path('user_show', {'slug': a.slug}) }}">
                         <img src="{{ a.picture }}" alt="{{ a.fullName }}">
                         </a>
                     </div>
-                    <div class="col text-right">
+                    <div class="col-md text-right">
                         <a href="{{ path('user_show', {'slug': a.slug}) }}"> <h3>{{ a.fullName}}</h3></a>
                         <span class="badge badge-secondary">{{ a.ads | length}} annonces</span>
                     </div>

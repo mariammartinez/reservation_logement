@@ -6,6 +6,8 @@ use App\Entity\Image;
 use App\Form\AdType;
 use App\Repository\AdRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -28,7 +30,7 @@ class AdController extends AbstractController
         $ads = $repo->findAll();
 
 
-        return $this->render('ad/show.html.twig', [
+        return $this->render('ad/index.html.twig', [
             'ads'=> $ads
         ]);
     }
@@ -37,10 +39,11 @@ class AdController extends AbstractController
      * Créer une annonce
      *
      * @Route("/ads/new", name= "ads_create")
+     * @IsGranted("ROLE_USER")
      *
      * @return Response
      */
-        public function create(Request $request, ManagerRegistry $managerRegistry){
+        public function create(Request $request, ²ManagerRegistry $managerRegistry){
 
             $ad = new Ad();
 
@@ -82,6 +85,7 @@ class AdController extends AbstractController
      * Permet d'afficher le form edit
      *
      * @Route("/ads/{slug}/edit", name="ads_edit")
+      * @Security("is_granted('ROLE_USER') and user === ad.getAuthor()", message= "pas le droit")
      *
      * @return Response
      *
