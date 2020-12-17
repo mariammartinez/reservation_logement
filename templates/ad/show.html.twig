@@ -10,6 +10,12 @@
             <h1>{{ ad.title }}</h1>
             <p> {{ ad.introduction }}</p>
             <P> {{ ad.price }} Euros</P>
+            <a href="{{ path('booking_create', {'slug' : ad.slug}) }}" class="btn btn-danger"> Réserver!</a>
+            {% if app.user and app.user == ad.author %}
+                <a href="{{ path('ads_edit', {'slug': ad.slug}) }}" class="btn btn-secondary">Modifier l'annonce</a>
+                <a href="{{ path('ads_delete', {'slug': ad.slug}) }}" class="btn btn-secondary" onclick="return confirm(`seguro {{ ad.title }}?`)">supprimer l'annonce</a>
+
+            {% endif %}
         </div>
     </div>
     <div class="container my-4">

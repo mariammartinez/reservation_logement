@@ -43,7 +43,7 @@ class AdController extends AbstractController
      *
      * @return Response
      */
-        public function create(Request $request, ²ManagerRegistry $managerRegistry){
+        public function create(Request $request, ManagerRegistry $managerRegistry){
 
             $ad = new Ad();
 
@@ -139,6 +139,26 @@ class AdController extends AbstractController
         return $this->render('ad/show.html.twig',[
             'ad' => $ad
             ]);
+    }
+
+    /**
+     * @Route("ad/{slug}/delete", name="ads_delete")
+     * @Security("is_granted('ROLE_USER') and user == ad.getAuthor()", message="no non no")
+     *
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
+    public function delete(Ad $ad, ManagerRegistry $manager){
+        $manager = $manager->getManager();
+        $manager->remove($ad);
+        $manager->flush();
+
+        $this->addFlash(
+            'Success',
+            "Les modifs {$ad->getTitle()} ont bien été supprimée !"
+        );
+
+
+        return $this->redirectToRoute('ads_index');
     }
 
 }

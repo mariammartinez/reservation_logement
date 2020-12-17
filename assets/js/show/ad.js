@@ -1,5 +1,4 @@
 "use strict";
-alert("coco")
 
 $('#add-image').click(function() {
     //recuperation de champs

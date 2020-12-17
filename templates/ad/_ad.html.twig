@@ -11,6 +11,11 @@
             </a>
             <a href="{{ url }}">
                 <img src="{{ ad.coverImage }}" alt="une image" style="height: 200px; width: 100%; display: block"></a>
+
+            {% if app.user and app.user == ad.author %}
+                <a href="{{ path('ads_edit', {'slug': ad.slug}) }}" class="btn btn-secondary">Modifier l'annonce</a>
+            {% endif %}
+
         </div>
     </div>
 </div>
