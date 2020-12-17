@@ -33,13 +33,14 @@ class Booking
 
     /**
      * @ORM\Column(type="datetime")
+     * @Assert\Date(message="pas valide")
      *
      */
     private $startDate;
 
     /**
      * @ORM\Column(type="datetime")
-     *
+     * @Assert\Date(message="pas valide")
      */
     private $endDate;
 
