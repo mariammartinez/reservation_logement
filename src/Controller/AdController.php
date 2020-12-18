@@ -16,7 +16,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class AdController extends AbstractController
 {
     /**
-     * @Route("/ads", name="ads_in  dex")
+     * @Route("/ads", name="ads_index")
      *
      * @param AdRepository $repo
      *

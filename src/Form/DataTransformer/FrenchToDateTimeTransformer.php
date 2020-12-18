@@ -9,8 +9,8 @@ class FrenchToDateTimeTransformer implements DataTransformerInterface {
 
     public function transform($date)
     {
-
         if($date === null){
+            die('date = null');
             return '';
         }
 
@@ -25,7 +25,7 @@ class FrenchToDateTimeTransformer implements DataTransformerInterface {
         }
         $date = \DateTime::createFromFormat('d/m/Y', $frenchDate);
 
-        if($date === false){
+        if($date == false){
             //exception
             throw  new TransformationFailedException("pas bon");
         }

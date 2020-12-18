@@ -27,7 +27,6 @@ class BookingController extends AbstractController
 
         if($form->isSubmitted() && $form->isValid()){
             $user = $this->getUser();
-
             $booking->setBooker($user)
                     ->setAd($ad);
 

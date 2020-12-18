@@ -33,14 +33,14 @@ class Booking
 
     /**
      * @ORM\Column(type="datetime")
-     * @Assert\Date(message="pas valide")
-     *
+     * @Assert\GreaterThan("today", message="on peut pas aller dans le passé")
      */
     private $startDate;
 
     /**
      * @ORM\Column(type="datetime")
-     * @Assert\Date(message="pas valide")
+     * @Assert\GreaterThan(propertyPath="startDate", message="on ne peut pas partir si on n'est pas encore arrivé")
+     *
      */
     private $endDate;
 
@@ -83,6 +83,7 @@ class Booking
         $bookingDays = $this->getDays();
 
         $formatDay = function ($day){
+
             return $day->format('Y-m-d');
         };
 

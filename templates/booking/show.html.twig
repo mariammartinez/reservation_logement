@@ -1,17 +1,16 @@
 {% extends 'base.html.twig' %}
 
-{% block title %} Booking {{ booking.id }}! {% endblock %}
-
+{% block title %} Booking {{ booking.id }} {% endblock %}
 
 {% block body %}
     {% set ad = booking.ad %}
     {% set author = ad.author %}
     <div class="container">
-        <h1>Votre réservation {{ booking.id }}</h1>
+        <h2>Votre réservation </h2>
 
         {% if app.request.query.get('withAlert') %}
             <div class="alert alert-success">
-                <h4 class="alert-heading">Bravo!</h4>
+                <h4> Bravo </h4>
                 <p>
                     votre réservation auprès de
                     <strong>

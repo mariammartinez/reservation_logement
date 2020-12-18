@@ -14,9 +14,8 @@ class homeController extends AbstractController{
      *
      * Montrer la page
      *
-     * @return void
+     * @return Response
      */
-
     public function hello($prenom = "nada", $age=10){
         return $this->render(
             'nuevo.html.twig',
