@@ -120,6 +120,36 @@ class Ad
     }
 
     /**
+     * @param User $author
+     * @return mixed|null
+     */
+    public function getCommentFromAuthor(User $author) {
+        foreach ($this->comments as $comment){
+            if($comment->getAuthor() == $author) return $comment;
+        }
+
+        return null;
+    }
+
+
+    /**
+     * Moyenne des notes
+     *
+     * @return float|int
+     */
+    public function getAvgRatings(){
+        //calculer la somme
+        $sum = array_reduce($this->comments->toArray(), function ($total, $comment){
+            return $total + $comment->getRating();
+        }, 0);
+
+       // diviser rpor la moyenne
+
+    if (count($this->comments) > 0 ) return $sum / count($this->comments);
+        return 0;
+    }
+
+    /**
      * tableau de jours pas dispo
      *
      * @return array un tableau dateTime de jours pris

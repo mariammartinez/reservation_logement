@@ -2,7 +2,13 @@
 <div class="col-md-4">
     <div class="card text-white bg-warning mb-3 "  style="max-width: 20rem;">
         <div class="card-header">{{ ad.title }}</div>
-        <div class="card-body">a
+        <div class="card-body">
+            {%  if ad.comments|length > 0 %}
+             {% include 'partials/rating.html.twig' with {'rating' :  ad.avgRatings} %}
+            {% else %}
+            <small>Pas encore noté</small>
+            {% endif %}
+
             <a href="{{ url }}">
                 <h4 class="card-title">{{ ad.price }} euros</h4>
             </a>

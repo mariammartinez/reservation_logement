@@ -44,6 +44,42 @@
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
+                <hr>
+                {% if ad.comments|length >0 %}
+                    <h2 class="mb-3"> Commentaire du visiteur:</h2>
+                    <div class="alert alert-info">
+                        <h4 class="alert-heading">
+                            <div class="row">
+                                <div class="col">
+                                    Note globale
+
+                                </div>
+                                <div class="col">
+                                    {% include 'partials/rating.html.twig' with {'rating' : ad.avgRatings} %}
+                                    <br> <small> moyenne sur {{ ad.comments|length}} avis</small>
+                                </div>
+                            </div>
+
+                        </h4>
+                    </div>
+
+                    {% for comment in ad.comments %}
+                    <div class="bg-light rounded mb-3 px-3 py-3">
+                    <stron> {{ comment.author.fullName }}</stron> a dit
+
+                        <blockquote> {{ comment.content }}</blockquote>
+                        <strong>note donné </strong>
+
+                        {% include 'partials/rating.html.twig' with {'rating': comment.rating} %}
+
+                    </div>
+                    {% endfor %}
+
+                {% else %}
+                    <h2>cette annonce n'a pas de comment</h2>
+
+                {% endif %}
+
             </div>
             <div class="col my-4">
                 {%  set a = ad.author %}
