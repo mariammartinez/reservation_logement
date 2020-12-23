@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>connexion</title>
+    <script src="/build/private.bundle.js"></script>
+    <script src="https://kit.fontawesome.com/bef505d875.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+        }
+        .card {
+            margin-top:10% ;
+        }
+    </style>
+</head>
+<body>
+    <div class="col-md-6">
+        <div class="card bg light">
+            <div class="card-header">
+                <h4 class="card-title">
+                    <i class="fas fa-lock">
+                        Connexion à l'administration
+                    </i>
+                </h4>
+            </div>
+            <div class="card-body">
+                {% if hasError %}
+                    <div class="alert alert-danger">
+                        Pas bon
+                    </div>
+                {% endif %}
+                <form method="post">
+                    <div class="form-group"><label for="_username">Email</label><input type="text" class="form-control" placeholder="email" name="_username"></div>
+                    <div class="form-group"><label for="_password"></label><input type="password" class="form-control" placeholder="password" name="_password"></div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success">
+                            <i class="fas fa-lock-open">
+                                Connexion !
+                            </i>
+                        </button>
+                            <a href="{{ path('homepage') }}" class="btn btn-lin">
+                                <i class="fas fa-arrow-circle-left"></i>
+                                Retour au site
+                            </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
