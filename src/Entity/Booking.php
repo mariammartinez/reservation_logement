@@ -33,7 +33,7 @@ class Booking
 
     /**
      * @ORM\Column(type="datetime")
-     * @Assert\GreaterThan("today", message="on peut pas aller dans le passé")
+     * @Assert\GreaterThan("today", message="on peut pas aller dans le passé", groups={"front"})
      */
     private $startDate;
 
@@ -63,6 +63,7 @@ class Booking
      * callback
      *
      * @ORM\PrePersist
+     * @ORM\PreUpdate
      *
      */
     public function prePersist(){

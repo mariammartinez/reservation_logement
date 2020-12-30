@@ -124,4 +124,8 @@ class Comment
 
         return $this;
     }
+
+    public function getTitle()
+    {
+    }
 }

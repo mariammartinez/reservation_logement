@@ -1,0 +1,43 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Administration booking!{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <h1 class="my-5">Gestion des Réservations</h1>
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th class="text-center">Date</th>
+                <th >Visiteur</th>
+                <th class="text-center">Annonce</th>
+                <th>Montant</th>
+                <th class="text-center">Actions</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            {% for booking in pagination.data %}
+                <tr>
+                    <td>{{ booking.id }}</td>
+                   <td>{{ booking.createdAt|date('d/m/Y') }}</td>
+                    <td>
+                        <img src="{{ booking.ad.author.picture }}" alt="avatar" class="avatar avatar-mini mr-2">
+                        {{ booking.ad.author.fullName }}
+                    </td>
+                    <td class="text-center">
+                        {{ booking.ad.title }}
+                    </td>
+                    <td> {{ booking.ad.price }} €</td>
+                    <td>
+                        <a href="#" class="btn btn-primary"><i class="fas fa-edit"> </i></a>
+                        <a href="#" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        {{ pagination.display() }}
+    </div>
+{% endblock %}

@@ -9,4 +9,3 @@ require('bootstrap');
 
 require("./show/ad");
 
-
