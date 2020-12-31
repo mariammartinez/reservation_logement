@@ -2,7 +2,7 @@
 
 {% block body %}
     <div class="jumbotron">
-        <h1 class="display-3">Hello, world!</h1>
+        <h1 class="display-3">Bienvenue sur LE SITE!</h1>
         <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
         <hr class="my-4">
         <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
@@ -16,33 +16,27 @@
         <p class="mb-0"><span class="20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dicta ea eaque eligendi enim est fugit, illo ipsa odio sed sint sit temporibus voluptatem? Cumque molestiae numquam unde! Quis, tempora!</span</a>.</p>
     </div>
     <div class="row m-5">
-        <div class="col-md-4">
-            <div class="card text-white bg-success mb-3 "  style="max-width: 20rem;">
-                <div class="card-header">Titulo</div>
+    {% for data in ads %}
+        {% include 'ad/_ad.html.twig' with {'ad': data.annonce} %}
+        {% endfor %}
+    </div>
+
+    <div class="row">
+        {% for data in users %}
+        <div class="col">
+            <div class="card border-danger mb-3">
                 <div class="card-body">
-                    <h4 class="card-title">Primary card title</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <h4 class="card-title">{{ data.user.fullname }}</h4>
+                    <hr>
+                    <div class="card-text">
+                        <img src="{{ data.user.picture }}" alt="avatar" class="float-left mr-3">
+                        <p>{{ data.user.introduction }}</p>
+                        <a href="{{ path('user_show', {'slug' : data.user.slug}) }}" class="btn btn-warning float-right">En savoir plus</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card text-white bg-success mb-3 "  style="max-width: 20rem;">
-                <div class="card-header">Titulo</div>
-                <div class="card-body">
-                    <h4 class="card-title">Primary card title</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card text-white bg-success mb-3 "  style="max-width: 20rem;">
-                <div class="card-header">Titulo</div>
-                <div class="card-body">
-                    <h4 class="card-title">Primary card title</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 
 

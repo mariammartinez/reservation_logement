@@ -5,36 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2929bd26-bff2-449d-bc42-f2560ab84bea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/css/_bootswatch.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/bootstrap.min (1).css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/AdminBookingController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/AdminCommentController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/AdminDashboardController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/AdminBookingType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/AdminCommentType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Service/PaginationService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/booking/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/booking/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/comment/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/comment/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/dashboard/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/partials/pagination.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/StatsService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/private.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/build/private.bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AdminAdController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminAdController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Booking.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Booking.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Comment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/BookingType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/BookingType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/ad/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/ad/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/ad/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/ad/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/partials/header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/partials/header.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdminDashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminDashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/homeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/homeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/AdRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/AdRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/dashboard/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/dashboard/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/hello.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hello.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +193,8 @@
       <workItem from="1609250392688" duration="8622000" />
       <workItem from="1609314472855" duration="1559000" />
       <workItem from="1609318741997" duration="1530000" />
-      <workItem from="1609331463939" duration="914000" />
+      <workItem from="1609331463939" duration="11878000" />
+      <workItem from="1609402836213" duration="3725000" />
     </task>
     <servers />
   </component>
