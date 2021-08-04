@@ -10,7 +10,7 @@ Les contraintes techniques sont d'utiliser Symfony avec le template Twig pour le
 composer i
 
 ````
-#### Database  
+Configurer le schema qui se trouve dans le fichier .env
 ````
 php bin/console doctrine:database:create
 
@@ -18,6 +18,8 @@ php bin/console make:migration
  
 php bin/console doctrine:migrations:migrate
 
+````
+````
 symfony server:start
 ````
 ### Front
