@@ -9,14 +9,12 @@ Utiliser Symfony avec le template Twig pour le front et une base de données Mys
 ### Back
 
 ````
-composer i
+composer install
 
 ````
-Configurer le schema qui se trouve dans le fichier .env
+Configurer le fichier .env
 ````
 php bin/console doctrine:database:create
-
-php bin/console make:migration
  
 php bin/console doctrine:migrations:migrate
 
